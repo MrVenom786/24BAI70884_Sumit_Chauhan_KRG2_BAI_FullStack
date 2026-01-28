@@ -1,0 +1,170 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animated Gradient Background */
+body {
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.logo span {
+  color: #facc15;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {color: #facc15;}
+  50% {color: #4ade80;}
+  100% {color: #facc15;}
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: #ff6ec4;
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-12px);}
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.search-box input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+.search-box button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6ec4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+.search-box button:hover {
+  transform: scale(1.1);
+  background: #facc15;
+}
+
+/* Jobs Section */
+.jobs {
+  padding: 60px;
+  text-align: center;
+}
+.jobs h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.job-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.job-card {
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  width: 280px;
+  border-radius: 12px;
+  transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+  cursor: pointer;
+}
+.job-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.job-card button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #4ade80;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.job-card button:hover {
+  background: #facc15;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0,0,0,0.6);
+  font-size: 0.9rem;
+}
