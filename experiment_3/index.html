@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Job Search Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="form-card">
+            <h2>Find Your Dream Job</h2>
+
+            <form id="jobForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="jobTitle" placeholder="Preferred Job Title" required>
+                <input type="text" id="location" placeholder="Preferred Location" required>
+                <input type="number" id="experience" placeholder="Years of Experience" required>
+
+                <select id="jobType" required>
+                    <option value="">Select Job Type</option>
+                    <option>Full-Time</option>
+                    <option>Part-Time</option>
+                    <option>Internship</option>
+                    <option>Remote</option>
+                </select>
+
+                <button type="submit">Create Profile</button>
+            </form>
+        </div>
+
+        <div class="profile-card" id="profileCard">
+            <h2>User Profile</h2>
+            <div class="profile-content">
+                <p><span>Name:</span> <strong id="pName"></strong></p>
+                <p><span>Email:</span> <strong id="pEmail"></strong></p>
+                <p><span>Job Title:</span> <strong id="pJobTitle"></strong></p>
+                <p><span>Location:</span> <strong id="pLocation"></strong></p>
+                <p><span>Experience:</span> <strong id="pExperience"></strong></p>
+                <p><span>Job Type:</span> <strong id="pJobType"></strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
