@@ -1,0 +1,150 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #005a9e;
+  animation: slideDown 1s ease;
+}
+
+nav {
+  margin: 20px;
+}
+
+nav button {
+  margin: 0 10px;
+  padding: 12px 20px;
+  border: none;
+  background: #0078d7;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+nav button:hover {
+  background: #005a9e;
+  transform: scale(1.05);
+}
+
+section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+#postMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+  animation: fadeIn 0.8s ease;
+}
+
+#itemList {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+#itemList li {
+  padding: 10px;
+  background: #e9ecef;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  animation: fadeInUp 0.5s ease;
+}
+
+footer {
+  margin-top: auto;
+  padding: 15px;
+  text-align: center;
+  background: rgba(255,255,255,0.7);
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

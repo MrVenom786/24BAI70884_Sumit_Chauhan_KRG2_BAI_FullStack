@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post & Dynamic List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>LAB MST</h1>
+  </header>
+
+  <nav>
+    <button id="showPost">✍️ Submit Post</button>
+    <button id="showList">📋 Dynamic List</button>
+  </nav>
+
+  <section id="postSection" class="hidden fade">
+    <h2>Submit a Post</h2>
+    <form id="postForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+      
+      <label for="body">Body:</label>
+      <textarea id="body" name="body" required></textarea>
+      
+      <button type="submit">🚀 Submit</button>
+    </form>
+    <p id="postMessage"></p>
+  </section>
+
+  <section id="listSection" class="hidden fade">
+    <h2>Dynamic List</h2>
+    <input type="text" id="itemInput" placeholder="Enter item">
+    <button id="addItem">➕ Add Item</button>
+    <button id="removeItem">➖ Remove Last Item</button>
+    <ul id="itemList"></ul>
+  </section>
+
+  <footer>
+    <p>Made by SUMIT CHAUHAN</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
